@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # my-blog
 
 > 有vue写一个简单的博客demo
@@ -23,3 +24,18 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# blog-home
+博客展示端 vue
+
+项目地址：http://web.jianghaifeng.top/
+
+博客规划
+
+1.首页
+2.笔记列表
+3.相册
+4.留言
+5.评论
+6....待定
+>>>>>>> 10b53933fd9bb61576e4e8784e465dc1178641f0
