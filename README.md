@@ -23,18 +23,34 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-=======
+
+
 # blog-home
 博客展示端 vue
 
 项目地址：http://web.jianghaifeng.top/
 
-博客规划
+###  技术栈
 
-1.首页
-2.笔记列表
-3.相册
-4.留言
-5.评论
-6....待定
+- vue2.5+vue-router+vuex（vue全家桶）
+- element-ui（使用了按钮相关组件）
+- mavon-editor（markdown查看）
+- axios（数据请求）
+
+### 功能
+
+-  首页
+
+- 博客列表
+
+- 笔记查看
+
+  
+
+### 待加入功能
+
+1、书架
+
+2、相册
+
+3、音乐播放器
