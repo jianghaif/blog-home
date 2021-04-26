@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 # my-blog
 
-> 有vue写一个简单的博客demo
+> 用vue写一个简单的博客demo
 
-这是用Vue搭建的一个简易博客，主要是由博客首页、添加博客、阅读博客等这几个页面组成。
+这是用Vue搭建的一个简易博客，主要是由博客首页、笔记列表等这几个页面组成。
 
-项目浏览地址：https://yuan-yiming.github.io/a-vue-blog/dist/#/
+项目浏览地址：https://github.com/jianghaif/blog-home
 
 ## Build Setup
 
@@ -38,4 +38,3 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 4.留言
 5.评论
 6....待定
->>>>>>> 10b53933fd9bb61576e4e8784e465dc1178641f0
