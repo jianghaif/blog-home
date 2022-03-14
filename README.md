@@ -36,6 +36,7 @@ npm run build --report
 - element-ui（使用了按钮相关组件）
 - mavon-editor（markdown查看）
 - axios（数据请求）
+- oss文件上传
 
 ### 功能
 
