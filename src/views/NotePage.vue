@@ -7,6 +7,7 @@
         <span>发表：{{ blog.createAt }}</span> | 
         <!-- <span>标签：<span v-for="tag in blog.tags">{{ tag }}{{ blog.tags.indexOf(tag) == blog.tags.length-1 ? "" : "," }}  </span></span></p> -->
       <p>{{ blog.content | cutContent }}</p>
+      <el-divider></el-divider>
     </div>
     <!-- <div class="pagination-container">
       <el-pagination

@@ -15,7 +15,7 @@
         />
       </div>
       </router-link>
-      <div class="desc">守护微笑！</div>
+      <div class="desc"> {{ reminder.reminders }}  <br> ---  {{reminder.authorOrigin}}</div>
       <router-link to="/notePage">
         <el-button plain style="opacity:0.4;color:#000">进入博客</el-button>
       </router-link>
@@ -29,11 +29,22 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HomePage',
   components: {
   },
+  created(){
+    this.getReminders()
+  },
   methods: {
+    getReminders() {
+      var host = process.env.BASE_API
+      axios.post(host + '/api/Reminder/random.json').then(response => {
+        this.reminder = response.data.entity
+        console.log(this.reminder)
+      })
+    },
     play(){
         let $audio = this.$refs.audio1;//调用play（）方法播放
         // $audio.addEventListener("playing", function(){		//播放状态Doing
@@ -59,6 +70,11 @@ export default {
   data () {
     return {
       status: '播放音乐',
+      reminder: {
+        authorOrigin: '',
+        reminders: '',
+        figureCaptions: ''
+      }
     }
   },
   mounted() {

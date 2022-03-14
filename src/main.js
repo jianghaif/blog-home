@@ -11,7 +11,7 @@ Vue.use(ElementUI)
 // Vue.config.productionTip = false;
 // Vue.use(CKEditor);
 import mavonEditor from 'mavon-editor'
-import 'mavon-editor/dist/css/index.css'
+// import 'mavon-editor/dist/css/index.css'
 Vue.use(mavonEditor)
 // use
 
