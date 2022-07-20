@@ -3,8 +3,8 @@
     <h2>博客列表<input type="" name="" v-model="query"></h2>
     <div v-for="blog in filteredBlogs" :key="blog.noteId" class="item">
       <h3><router-link :to="{name: 'ReadBlog', params: {id: blog.noteId}}">{{ blog.title }}</router-link></h3>
-      <p class="blog-info"><span >作者：{{ blog.author }}</span> | 
-        <span>发表：{{ blog.createAt }}</span> | 
+      <p class="blog-info"><span >作者：jhf{{ blog.author }}</span> | 
+        <span>发表：{{ blog.createTime }}</span> | <span>下载笔记：{{ blog.createTime }}</span>
         <!-- <span>标签：<span v-for="tag in blog.tags">{{ tag }}{{ blog.tags.indexOf(tag) == blog.tags.length-1 ? "" : "," }}  </span></span></p> -->
       <p>{{ blog.content | cutContent }}</p>
       <el-divider></el-divider>

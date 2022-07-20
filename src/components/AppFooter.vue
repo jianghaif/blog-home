@@ -12,7 +12,7 @@ export default {
       footer: '真实的',
       url: 'https://github.com/jianghaif',
       nowYear: null,
-      name: '峰'
+      name: '峰博烩'
     }
   },
   created() {
