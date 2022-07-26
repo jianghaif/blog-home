@@ -4,15 +4,33 @@
     <div v-for="blog in filteredBlogs" :key="blog.noteId" class="item">
       <h3><router-link :to="{name: 'ReadBlog', params: {id: blog.noteId}}">{{ blog.title }}</router-link></h3>
       <p class="blog-info"><span >作者：jhf{{ blog.author }}</span> | 
-        <span>发表：{{ blog.createTime }}</span> | <span>下载笔记：{{ blog.createTime }}</span>
-        <!-- <span>标签：<span v-for="tag in blog.tags">{{ tag }}{{ blog.tags.indexOf(tag) == blog.tags.length-1 ? "" : "," }}  </span></span></p> -->
+        <span>发表：{{ blog.createTime }}</span> | 知识点：<el-tag
+            v-for="tag in JSON.parse(blog.tags)"
+            :key="tag"
+            :disable-transitions="false" size="mini">
+            {{ tag }}
+          </el-tag>
       <p>{{ blog.content | cutContent }}</p>
       <el-divider></el-divider>
     </div>
-    <!-- <div class="pagination-container">
+    <!-- <ul class="infinite-list" v-infinite-scroll="load" style="overflow:auto">
+      <li v-for="blog in filteredBlogs" :key="blog.noteId" class="item infinite-list-item">
+      <h3><router-link :to="{name: 'ReadBlog', params: {id: blog.noteId}}">{{ blog.title }}</router-link></h3>
+      <p class="blog-info"><span >作者：jhf{{ blog.author }}</span> | 
+        <span>发表：{{ blog.createTime }}</span> | 知识点：<el-tag
+            v-for="tag in JSON.parse(blog.tags)"
+            :key="tag"
+            :disable-transitions="false" size="mini">
+            {{ tag }}
+          </el-tag>
+      <p>{{ blog.content | cutContent }}</p>
+      <el-divider></el-divider>
+      </li>
+    </ul> -->
+    <div class="pagination-container">
       <el-pagination
         :current-page="listQuery.pageNo"
-        :page-sizes="[10, 20, 30, 50]"
+        :page-sizes="[20, 40, 60, 80]"
         :page-size="listQuery.size"
         :total="total"
         background
@@ -20,7 +38,7 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
       />
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -73,7 +91,7 @@ export default {
       p.then(response => {
         console.log(response)
         console.log(response.page)
-        this.total += response.data.page.total
+        this.total = response.data.page.total
         this.list = response.data.page.records
       })
     },
@@ -151,5 +169,7 @@ input:focus {
   font-size: 12px;
   color: #999;
 }
-
+.el-tag + .el-tag {
+    margin-left: 5px;
+  }
 </style>

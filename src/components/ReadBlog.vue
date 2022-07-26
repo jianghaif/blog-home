@@ -7,7 +7,12 @@
           icon="el-icon-download"
           @click="downloadDialog"
           ></el-button
-        ></span></p>
+        ></span>| 知识点：<el-tag
+            v-for="tag in JSON.parse(blog.tags)"
+            :key="tag"
+            :disable-transitions="false" size="mini">
+            {{ tag }}
+          </el-tag></p>
         <!-- <span>标签：<span v-for="tag in blog.tags" class="tag">{{ tag }}</span></span></p> -->
       <!-- <p class="content" v-html="blog.content"></p> -->
       <mavon-editor
@@ -177,5 +182,7 @@ h1, h2 {
 .content {
   margin-top: 20px;
 }
-
+.el-tag + .el-tag {
+    margin-left: 5px;
+  }
 </style>
